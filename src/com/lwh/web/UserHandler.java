@@ -1,6 +1,7 @@
 package com.lwh.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -46,6 +47,19 @@ public class UserHandler {
     @RequestMapping(value = "**")
     public String im(){
         System.out.println("发送消息!");
+        return "success";
+    }
+
+    /**
+     *  占位符 /{}
+     * @param name  把接收的userName 封装起来
+     * @param id    把接收的userId 封装起来。 隔离前端的参数和后端的参数匹配问题
+     * @return
+     */
+    @RequestMapping(value = "/reg/{username}/{userId}")
+    public String register(@PathVariable("username")String name,
+                           @PathVariable("userId") Long id){
+        System.out.println("登录成功！ usernname"+name + "userId" + id);
         return "success";
     }
 }
