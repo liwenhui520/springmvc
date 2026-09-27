@@ -33,6 +33,19 @@ public class UserHandler {
     @RequestMapping(value = "/find2", params = "bookId!=1000",method = RequestMethod.GET)
     public String search2(String bookId){
         System.out.println("查询书籍 bookId=" + bookId);
-        return "login_ok";
+        return "success";
+    }
+
+    /**
+     * ant 通配符
+     * 1. ?：匹配文件名中的一个字符
+     * 2. *：匹配文件名中的任意字符
+     * 3. **:匹配多层路径
+     * @return
+     */
+    @RequestMapping(value = "**")
+    public String im(){
+        System.out.println("发送消息!");
+        return "success";
     }
 }
