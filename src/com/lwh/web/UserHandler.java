@@ -1,6 +1,7 @@
 package com.lwh.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -59,7 +60,25 @@ public class UserHandler {
     @RequestMapping(value = "/reg/{username}/{userId}")
     public String register(@PathVariable("username")String name,
                            @PathVariable("userId") Long id){
-        System.out.println("登录成功！ usernname"+name + "userId" + id);
+        System.out.println("登录成功！ username:\t"+name + "\tuserId:\t" + id);
+        return "success";
+    }
+
+    @RequestMapping(value = "/hi")
+    public String hi(){
+        System.out.println("hi()....");
+        return "success";
+    }
+
+//    @RequestMapping(value = "/hi")
+//    public String hi1(){
+//        System.out.println("hi1()...");
+//        return "success";
+//    }
+
+    @GetMapping(value = "/hello/{email}")
+    public String hello(@PathVariable("email") String email){
+        System.out.println("hello\t"+email);
         return "success";
     }
 }
