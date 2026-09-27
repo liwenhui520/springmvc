@@ -1,0 +1,64 @@
+/src/com/lwh/spring/test/LwhApplicationContext.java
+<<<<<<< HEAD
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.env
+.idea
+out
+gen
+target
+*.class
+
+*.log
+.settings
+.project
+=======
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+# Default ignored files
+#/shelf/
+#/workspace.xml
+## Editor-based HTTP Client requests
+#/httpRequests/
+## Datasource local storage ignored files
+#/dataSources/
+#/dataSources.local.xml
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+
+.classpath
+.project
+.settings
+target
+out
+gen
+.idea
+*.iml
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> cd314ec2fec9ce4489fb31079be10c0747a764b4
