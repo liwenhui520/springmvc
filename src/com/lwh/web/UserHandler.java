@@ -45,7 +45,7 @@ public class UserHandler {
      * 3. **:匹配多层路径
      * @return
      */
-    @RequestMapping(value = "**")
+    @RequestMapping(value = "/message/**")
     public String im(){
         System.out.println("发送消息!");
         return "success";
