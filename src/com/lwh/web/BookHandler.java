@@ -45,6 +45,12 @@ public class BookHandler {
         return "redirect:/bookHandler/success";
     }
 
+    @PutMapping("/bookUpdate/{id}")
+    public String updateBook(@PathVariable("id") String id){
+        System.out.println("修改书籍 "+ id);
+        return "redirect:/bookHandler/success";
+    }
+
     @RequestMapping(value = "/success")
     public String successGenecal(){
         return "success";
