@@ -310,6 +310,38 @@
         </form>
     </div>
 
+    <div class="card">
+        <div class="card-title">
+            <span class="icon">🐾</span> 提交 Master &amp; Pet（session域中）
+        </div>
+        <form action="${pageContext.request.contextPath}/vote/vote08" method="post">
+            <div class="sub-title">主人信息</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="masterId2">主人号</label>
+                    <input type="text" id="masterId3" name="id" placeholder="请输入主人号">
+                </div>
+                <div class="form-group">
+                    <label for="masterName2">主人名</label>
+                    <input type="text" id="masterName3" name="name" placeholder="请输入主人名">
+                </div>
+            </div>
+            <div class="sub-title">宠物信息</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="petId2">宠物号</label>
+                    <input type="text" id="petId3" name="pet.id" placeholder="请输入宠物号">
+                </div>
+                <div class="form-group">
+                    <label for="petName2">宠物名</label>
+                    <input type="text" id="petName3" name="pet.name" placeholder="请输入宠物名">
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">提交 Master &amp; Pet</button>
+        </form>
+    </div>
+
+
 </div>
 
 </body>

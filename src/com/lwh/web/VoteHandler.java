@@ -2,13 +2,12 @@ package com.lwh.web;
 
 import com.lwh.entity.Master;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.util.Map;
 
 /**
  * @author lwh
@@ -82,6 +81,21 @@ public class VoteHandler {
         request.setAttribute("master",master);
         request.setAttribute("address","北京");
         return "vote_ok";
+    }
+
+    @PostMapping("/vote08")
+    public String vote08(Map<String,Object> map,
+                         Master master,
+                         HttpSession session){
+        map.put("address","广州");
+        session.setAttribute("master",master);
+        return "vote_ok";
+    }
+
+    @ModelAttribute
+    public void prepareWork(){
+        System.out.println("调用handler 中任意请求，都会调用这个请求");
+        System.out.println("可以完成一些数据校验工作，比如修改用户信息之后,然后比较数据");
     }
 
 }
