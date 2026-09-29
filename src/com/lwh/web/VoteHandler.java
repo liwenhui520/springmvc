@@ -75,4 +75,13 @@ public class VoteHandler {
         return "success";
     };
 
+    @PostMapping("/vote05")
+    public String vote05(Master master,HttpServletRequest request,HttpServletResponse response){
+        // 1, mvc 会自动地把获取地model 模型 ，放入到 request域中，名字就是master
+        // 2， 也可以手动放入到 request
+        request.setAttribute("master",master);
+        request.setAttribute("address","北京");
+        return "vote_ok";
+    }
+
 }
