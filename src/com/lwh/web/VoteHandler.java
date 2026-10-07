@@ -97,6 +97,7 @@ public class VoteHandler {
         System.out.println("调用handler 中任意请求，都会调用这个请求");
         System.out.println("可以完成一些数据校验工作，比如修改用户信息之后,然后比较数据");
         System.out.println("push github!");
+        System.out.println("unset proxy!");
     }
 
 }
