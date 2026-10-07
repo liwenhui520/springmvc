@@ -99,7 +99,7 @@ public class VoteHandler {
         System.out.println("push github!");
         System.out.println("unset proxy!");
         System.out.println("proxy 7897");
-        System.out.println("close vpn！");
+        System.out.println("close vpn1！");
     }
 
 }
